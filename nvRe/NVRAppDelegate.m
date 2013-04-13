@@ -7,6 +7,13 @@
 //
 
 #import "NVRAppDelegate.h"
+#import "NVRMarkdownHighlighter.h"
+
+@interface NVRAppDelegate ()
+{
+    NVRMarkdownHighlighter *highlighter;
+}
+@end
 
 @implementation NVRAppDelegate
 
@@ -24,7 +31,12 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    [self.textView setAutomaticTextReplacementEnabled:NO];
+    [self.textView setAutomaticSpellingCorrectionEnabled:NO];
+    [self.textView setSmartInsertDeleteEnabled:NO];
+    
+    highlighter = [[NVRMarkdownHighlighter alloc] initWithTextView:self.textView];
+    [highlighter activate];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "seongjaelee.nvRe" in the user's Application Support directory.
@@ -186,6 +198,45 @@
     }
 
     return NSTerminateNow;
+}
+
+- (IBAction)openDocument:(id)sender
+{
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    [openPanel setCanChooseDirectories:NO];
+    [openPanel setCanChooseFiles:YES];
+    [openPanel beginSheetModalForWindow:[self window] completionHandler:^(NSInteger result) {
+        if (result == NSOKButton) {
+            [openPanel orderOut:self]; // close panel before we might present an error
+            NSURL *url = [openPanel URL];
+            NSString *path;
+            if ([url isFileURL] && (path = [url path])) {
+                [self application:NSApp openFile:[url path]];
+            } else {
+                NSBeep();
+            }
+        }
+    }];
+}
+
+- (BOOL)application:(NSApplication *)app openFile:(NSString *)filename
+{
+    NSURL *fileURL = [NSURL fileURLWithPath:filename];
+    
+    NSError *error;
+    NSString *newContents = [[NSString alloc] initWithContentsOfURL:fileURL usedEncoding:NULL error:&error];
+    
+    if (newContents) {
+        [[[[self textView] textStorage] mutableString] setString:newContents];
+        [[[self textView] textStorage] addAttribute:NSFontAttributeName
+                                              value:[NSFont userFixedPitchFontOfSize:0.0]
+                                              range:NSMakeRange(0, [newContents length])];
+    } else {
+        [app presentError:error];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end

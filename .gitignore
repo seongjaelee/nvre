@@ -12,9 +12,7 @@
 *.log
 *.sql
 *.sqlite
-*.pbxproj
-*.xcworkspace
-*.xcuserdatad
+*.xcuserdata
 *.xcuserstate
 *.xcscheme
 *.swp

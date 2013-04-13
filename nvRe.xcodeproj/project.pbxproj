@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E5FF9DD21719073200F22C85 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5FF9DD11719073200F22C85 /* Cocoa.framework */; };
+		E5FF9DDC1719073200F22C85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5FF9DDA1719073200F22C85 /* InfoPlist.strings */; };
+		E5FF9DDE1719073200F22C85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FF9DDD1719073200F22C85 /* main.m */; };
+		E5FF9DE21719073200F22C85 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E5FF9DE01719073200F22C85 /* Credits.rtf */; };
+		E5FF9DE51719073200F22C85 /* NVRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FF9DE41719073200F22C85 /* NVRAppDelegate.m */; };
+		E5FF9DE81719073200F22C85 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5FF9DE61719073200F22C85 /* MainMenu.xib */; };
+		E5FF9DEB1719073200F22C85 /* nvRe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5FF9DE91719073200F22C85 /* nvRe.xcdatamodeld */; };
+		E5FF9DF21719100000F22C85 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5FF9DF11719100000F22C85 /* README.md */; };
+		E5FF9DF51719110600F22C85 /* NVRMarkdownHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FF9DF41719110600F22C85 /* NVRMarkdownHighlighter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E5FF9DCE1719073200F22C85 /* nvRe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nvRe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5FF9DD11719073200F22C85 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E5FF9DD41719073200F22C85 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E5FF9DD51719073200F22C85 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E5FF9DD61719073200F22C85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E5FF9DD91719073200F22C85 /* nvRe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nvRe-Info.plist"; sourceTree = "<group>"; };
+		E5FF9DDB1719073200F22C85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E5FF9DDD1719073200F22C85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5FF9DDF1719073200F22C85 /* nvRe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nvRe-Prefix.pch"; sourceTree = "<group>"; };
+		E5FF9DE11719073200F22C85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E5FF9DE31719073200F22C85 /* NVRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVRAppDelegate.h; sourceTree = "<group>"; };
+		E5FF9DE41719073200F22C85 /* NVRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVRAppDelegate.m; sourceTree = "<group>"; };
+		E5FF9DE71719073200F22C85 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E5FF9DEA1719073200F22C85 /* nvRe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nvRe.xcdatamodel; sourceTree = "<group>"; };
+		E5FF9DF11719100000F22C85 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		E5FF9DF31719110600F22C85 /* NVRMarkdownHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVRMarkdownHighlighter.h; sourceTree = "<group>"; };
+		E5FF9DF41719110600F22C85 /* NVRMarkdownHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVRMarkdownHighlighter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5FF9DCB1719073200F22C85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5FF9DD21719073200F22C85 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E5FF9DC51719073200F22C85 = {
+			isa = PBXGroup;
+			children = (
+				E5FF9DD71719073200F22C85 /* nvRe */,
+				E5FF9DD01719073200F22C85 /* Frameworks */,
+				E5FF9DCF1719073200F22C85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5FF9DCF1719073200F22C85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5FF9DCE1719073200F22C85 /* nvRe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5FF9DD01719073200F22C85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5FF9DD11719073200F22C85 /* Cocoa.framework */,
+				E5FF9DD31719073200F22C85 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5FF9DD31719073200F22C85 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5FF9DD41719073200F22C85 /* AppKit.framework */,
+				E5FF9DD51719073200F22C85 /* CoreData.framework */,
+				E5FF9DD61719073200F22C85 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E5FF9DD71719073200F22C85 /* nvRe */ = {
+			isa = PBXGroup;
+			children = (
+				E5FF9DE31719073200F22C85 /* NVRAppDelegate.h */,
+				E5FF9DE41719073200F22C85 /* NVRAppDelegate.m */,
+				E5FF9DF31719110600F22C85 /* NVRMarkdownHighlighter.h */,
+				E5FF9DF41719110600F22C85 /* NVRMarkdownHighlighter.m */,
+				E5FF9DE61719073200F22C85 /* MainMenu.xib */,
+				E5FF9DE91719073200F22C85 /* nvRe.xcdatamodeld */,
+				E5FF9DD81719073200F22C85 /* Supporting Files */,
+			);
+			path = nvRe;
+			sourceTree = "<group>";
+		};
+		E5FF9DD81719073200F22C85 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5FF9DF11719100000F22C85 /* README.md */,
+				E5FF9DD91719073200F22C85 /* nvRe-Info.plist */,
+				E5FF9DDA1719073200F22C85 /* InfoPlist.strings */,
+				E5FF9DDD1719073200F22C85 /* main.m */,
+				E5FF9DDF1719073200F22C85 /* nvRe-Prefix.pch */,
+				E5FF9DE01719073200F22C85 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5FF9DCD1719073200F22C85 /* nvRe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5FF9DEE1719073200F22C85 /* Build configuration list for PBXNativeTarget "nvRe" */;
+			buildPhases = (
+				E5FF9DCA1719073200F22C85 /* Sources */,
+				E5FF9DCB1719073200F22C85 /* Frameworks */,
+				E5FF9DCC1719073200F22C85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nvRe;
+			productName = nvRe;
+			productReference = E5FF9DCE1719073200F22C85 /* nvRe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5FF9DC61719073200F22C85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NVR;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Seong Jae Lee";
+			};
+			buildConfigurationList = E5FF9DC91719073200F22C85 /* Build configuration list for PBXProject "nvRe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E5FF9DC51719073200F22C85;
+			productRefGroup = E5FF9DCF1719073200F22C85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5FF9DCD1719073200F22C85 /* nvRe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5FF9DCC1719073200F22C85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5FF9DDC1719073200F22C85 /* InfoPlist.strings in Resources */,
+				E5FF9DE21719073200F22C85 /* Credits.rtf in Resources */,
+				E5FF9DE81719073200F22C85 /* MainMenu.xib in Resources */,
+				E5FF9DF21719100000F22C85 /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5FF9DCA1719073200F22C85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5FF9DDE1719073200F22C85 /* main.m in Sources */,
+				E5FF9DE51719073200F22C85 /* NVRAppDelegate.m in Sources */,
+				E5FF9DEB1719073200F22C85 /* nvRe.xcdatamodeld in Sources */,
+				E5FF9DF51719110600F22C85 /* NVRMarkdownHighlighter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E5FF9DDA1719073200F22C85 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5FF9DDB1719073200F22C85 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E5FF9DE01719073200F22C85 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5FF9DE11719073200F22C85 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E5FF9DE61719073200F22C85 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5FF9DE71719073200F22C85 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5FF9DEC1719073200F22C85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E5FF9DED1719073200F22C85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E5FF9DEF1719073200F22C85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nvRe/nvRe-Prefix.pch";
+				INFOPLIST_FILE = "nvRe/nvRe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E5FF9DF01719073200F22C85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nvRe/nvRe-Prefix.pch";
+				INFOPLIST_FILE = "nvRe/nvRe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5FF9DC91719073200F22C85 /* Build configuration list for PBXProject "nvRe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5FF9DEC1719073200F22C85 /* Debug */,
+				E5FF9DED1719073200F22C85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5FF9DEE1719073200F22C85 /* Build configuration list for PBXNativeTarget "nvRe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5FF9DEF1719073200F22C85 /* Debug */,
+				E5FF9DF01719073200F22C85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E5FF9DE91719073200F22C85 /* nvRe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E5FF9DEA1719073200F22C85 /* nvRe.xcdatamodel */,
+			);
+			currentVersion = E5FF9DEA1719073200F22C85 /* nvRe.xcdatamodel */;
+			path = nvRe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E5FF9DC61719073200F22C85 /* Project object */;
+}

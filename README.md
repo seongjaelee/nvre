@@ -8,12 +8,13 @@ Notational Velocity is a wonderful application to take notes and search notes qu
 
 nvRe is not ready yet.
 
-nvRe focusing on the following features:
+nvRe is focusing on the following features:
 
-* Support Korean
-* Markdown highlighting within the text editor
+* Fast note taking and searching.
 * Enhanced typography
+* Markdown highlighting within the text editor
 * Markdown or MultiMarkdown preview
+* Korean support
 
 This github repository has other goals:
 
