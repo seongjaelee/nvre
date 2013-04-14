@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F7F34401719A0F70074FBA2 /* NVRPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7F343E1719A0F70074FBA2 /* NVRPreferences.m */; };
+		9F7F34411719A0F70074FBA2 /* NVRPreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7F343F1719A0F70074FBA2 /* NVRPreferences.xib */; };
 		E5FF9DD21719073200F22C85 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5FF9DD11719073200F22C85 /* Cocoa.framework */; };
 		E5FF9DDC1719073200F22C85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5FF9DDA1719073200F22C85 /* InfoPlist.strings */; };
 		E5FF9DDE1719073200F22C85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FF9DDD1719073200F22C85 /* main.m */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F7F343C1719A0500074FBA2 /* NVRDefaultsKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVRDefaultsKeys.h; sourceTree = "<group>"; };
+		9F7F343D1719A0F70074FBA2 /* NVRPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVRPreferences.h; sourceTree = "<group>"; };
+		9F7F343E1719A0F70074FBA2 /* NVRPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVRPreferences.m; sourceTree = "<group>"; };
+		9F7F343F1719A0F70074FBA2 /* NVRPreferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NVRPreferences.xib; sourceTree = "<group>"; };
 		E5FF9DCE1719073200F22C85 /* nvRe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nvRe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FF9DD11719073200F22C85 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E5FF9DD41719073200F22C85 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -50,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F4D221B1719A286001B5473 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				9F7F343F1719A0F70074FBA2 /* NVRPreferences.xib */,
+				E5FF9DE61719073200F22C85 /* MainMenu.xib */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
 		E5FF9DC51719073200F22C85 = {
 			isa = PBXGroup;
 			children = (
@@ -89,12 +104,15 @@
 		E5FF9DD71719073200F22C85 /* nvRe */ = {
 			isa = PBXGroup;
 			children = (
+				9F7F343D1719A0F70074FBA2 /* NVRPreferences.h */,
+				9F7F343E1719A0F70074FBA2 /* NVRPreferences.m */,
+				9F7F343C1719A0500074FBA2 /* NVRDefaultsKeys.h */,
 				E5FF9DE31719073200F22C85 /* NVRAppDelegate.h */,
 				E5FF9DE41719073200F22C85 /* NVRAppDelegate.m */,
 				E5FF9DF31719110600F22C85 /* NVRMarkdownHighlighter.h */,
 				E5FF9DF41719110600F22C85 /* NVRMarkdownHighlighter.m */,
-				E5FF9DE61719073200F22C85 /* MainMenu.xib */,
 				E5FF9DE91719073200F22C85 /* nvRe.xcdatamodeld */,
+				9F4D221B1719A286001B5473 /* Interfaces */,
 				E5FF9DD81719073200F22C85 /* Supporting Files */,
 			);
 			path = nvRe;
@@ -169,6 +187,7 @@
 				E5FF9DE21719073200F22C85 /* Credits.rtf in Resources */,
 				E5FF9DE81719073200F22C85 /* MainMenu.xib in Resources */,
 				E5FF9DF21719100000F22C85 /* README.md in Resources */,
+				9F7F34411719A0F70074FBA2 /* NVRPreferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +202,7 @@
 				E5FF9DE51719073200F22C85 /* NVRAppDelegate.m in Sources */,
 				E5FF9DEB1719073200F22C85 /* nvRe.xcdatamodeld in Sources */,
 				E5FF9DF51719110600F22C85 /* NVRMarkdownHighlighter.m in Sources */,
+				9F7F34401719A0F70074FBA2 /* NVRPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

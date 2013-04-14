@@ -8,6 +8,18 @@
 
 #import "NVRAppDelegate.h"
 #import "NVRMarkdownHighlighter.h"
+#import "NVRDefaultsKeys.h"
+
+static NSDictionary *defaultValues() {
+    static NSDictionary *dict = nil;
+    if (!dict) {
+        dict = [[NSDictionary alloc] initWithObjectsAndKeys:
+                [NSNumber numberWithInt:80], TextEditorWidthKey,
+                [NSNumber numberWithFloat:2.6f], TextEditorLineHeightKey,
+                nil];
+    }
+    return dict;
+}
 
 @interface NVRAppDelegate ()
 {
@@ -31,9 +43,16 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues()];
+
     [self.textView setAutomaticTextReplacementEnabled:NO];
     [self.textView setAutomaticSpellingCorrectionEnabled:NO];
     [self.textView setSmartInsertDeleteEnabled:NO];
+    [self.textView setRichText:NO];
+    [self.textView setImportsGraphics:NO];
+    [self.textView setUsesFontPanel:NO];
+    [self.textView setUsesRuler:NO];
+    [self.textView setTextContainerInset:NSMakeSize(20, 20)];
     
     highlighter = [[NVRMarkdownHighlighter alloc] initWithTextView:self.textView];
     [highlighter activate];

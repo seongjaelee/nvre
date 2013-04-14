@@ -7,6 +7,8 @@
 //
 
 #import "NVRMarkdownHighlighter.h"
+#import "NVRPreferences.h"
+#import "NVRDefaultsKeys.h"
 
 @interface NVRMarkdownHighlighter ()
 {
@@ -56,12 +58,22 @@
     NSString *text = [targetTextView string];
     NSMutableAttributedString *attributedText = [targetTextView textStorage];
     
+    //NSFont *font = [[NVRPreferences defaultPreferences] editorFont];
+    NSFont *font = [NSFont fontWithName:@"Menlo" size:12.0f];
+    //[font maximumAdvancement].width;    
+    
     // clear
     [attributedText applyFontTraits:NSUnboldFontMask|NSUnitalicFontMask range:NSMakeRange(0, [text length])];
     [attributedText removeAttribute:NSForegroundColorAttributeName range:NSMakeRange(0, [text length])];
     [attributedText removeAttribute:NSBackgroundColorAttributeName range:NSMakeRange(0, [text length])];
+    [attributedText addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, [text length])];
     
-    // headings
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    float lineHeight = [[NSUserDefaults standardUserDefaults] floatForKey:TextEditorLineHeightKey];
+    //[paragraphStyle setLineHeightMultiple:lineHeight];
+    [targetTextView setDefaultParagraphStyle:paragraphStyle];
+
+    // headings애    
     // - todo. indent leading tags
     // - todo. support settext-style
     {
