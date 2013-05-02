@@ -7,7 +7,7 @@
 //
 
 #import "NVRMarkdownHighlighter.h"
-#import "NVRPreferencesWindowController.h"
+#import "NVRPreferences.h"
 #import "NVRDefaultsKeys.h"
 
 @interface NVRMarkdownHighlighter ()

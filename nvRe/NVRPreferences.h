@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NVRPreferencesWindowController : NSWindowController
+@interface NVRPreferences : NSWindowController
 
 - (IBAction)changeEditorFont:(id)sender;
 
