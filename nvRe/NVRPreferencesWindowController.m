@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Seong Jae Lee. All rights reserved.
 //
 
-#import "NVRPreferences.h"
+#import "NVRPreferencesWindowController.h"
 
-@interface NVRPreferences ()
+@interface NVRPreferencesWindowController ()
 
 @end
 
-@implementation NVRPreferences
+@implementation NVRPreferencesWindowController
 
 - (id)initWithWindow:(NSWindow *)window
 {
