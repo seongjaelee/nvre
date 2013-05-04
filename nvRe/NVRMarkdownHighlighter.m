@@ -58,22 +58,39 @@
     NSString *text = [targetTextView string];
     NSMutableAttributedString *attributedText = [targetTextView textStorage];
     
-    //NSFont *font = [[NVRPreferences defaultPreferences] editorFont];
-    NSFont *font = [NSFont fontWithName:@"Menlo" size:12.0f];
-    //[font maximumAdvancement].width;    
+    NSMutableDictionary *textAttributes = [[[NSMutableDictionary alloc] initWithCapacity:2] autorelease];
     
     // clear
     [attributedText applyFontTraits:NSUnboldFontMask|NSUnitalicFontMask range:NSMakeRange(0, [text length])];
     [attributedText removeAttribute:NSForegroundColorAttributeName range:NSMakeRange(0, [text length])];
     [attributedText removeAttribute:NSBackgroundColorAttributeName range:NSMakeRange(0, [text length])];
-    [attributedText addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, [text length])];
+    
+    //NSFont *font = [[NVRPreferences defaultPreferences] editorFont];
+    NSFont *font = [NSFont fontWithName:@"Apple SD Gothic Neo" size:12.0f];
+    //[attributedText addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, [text length])];
+    [textAttributes setObject:font forKey:NSFontAttributeName];
+    //[font maximumAdvancement].width;    
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    float lineHeight = [[NSUserDefaults standardUserDefaults] floatForKey:TextEditorLineHeightKey];
-    //[paragraphStyle setLineHeightMultiple:lineHeight];
-    [targetTextView setDefaultParagraphStyle:paragraphStyle];
+    //float lineHeight = [[NSUserDefaults standardUserDefaults] floatForKey:TextEditorLineHeightKey];
+    [paragraphStyle setLineHeightMultiple:1.5f];
+    [textAttributes setObject:[[paragraphStyle copy] autorelease] forKey:NSParagraphStyleAttributeName];
+    //[targetTextView setDefaultParagraphStyle:paragraphStyle];
+    
+    [attributedText enumerateAttribute:NSParagraphStyleAttributeName inRange:NSMakeRange(0, [attributedText length]) options:0 usingBlock:^(id paragraphStyle, NSRange paragraphStyleRange, BOOL *stop){
+        NSWritingDirection writingDirection = paragraphStyle ? [(NSParagraphStyle *)paragraphStyle baseWritingDirection] : NSWritingDirectionNatural;
+        // We also preserve NSWritingDirectionAttributeName (new in 10.6)
+        [attributedText enumerateAttribute:NSWritingDirectionAttributeName inRange:paragraphStyleRange options:0 usingBlock:^(id value, NSRange attributeRange, BOOL *stop){
+            [value retain];
+            [attributedText setAttributes:textAttributes range:attributeRange];
+            if (value) [attributedText addAttribute:NSWritingDirectionAttributeName value:value range:attributeRange];
+            [value release];
+        }];
+        if (writingDirection != NSWritingDirectionNatural) [attributedText setBaseWritingDirection:writingDirection range:paragraphStyleRange];
+    }];
 
-    // headings애    
+    
+    // headings
     // - todo. indent leading tags
     // - todo. support settext-style
     {

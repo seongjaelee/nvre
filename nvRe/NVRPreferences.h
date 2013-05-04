@@ -10,6 +10,9 @@
 
 @interface NVRPreferences : NSWindowController
 
+- (void)showWindow:(id)sender;
 - (IBAction)changeEditorFont:(id)sender;
+
+- (NSFont *)editorFont;
 
 @end

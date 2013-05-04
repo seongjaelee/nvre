@@ -7,11 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NVRPreferences.h"
 
 @interface NVRAppDelegate : NSObject <NSApplicationDelegate>
+{
+    IBOutlet NSUserDefaultsController *sharedUserDefaultsController;
+    IBOutlet NVRPreferences *preferencesController;
+}
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSTextView *textView;
+@property (assign) NVRPreferences *preferencesController;
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
