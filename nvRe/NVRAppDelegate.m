@@ -37,6 +37,7 @@ static NSDictionary *defaultValues() {
     [super dealloc];
 }
 
+@synthesize preferencesController;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
